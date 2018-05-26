@@ -4,6 +4,8 @@ ChatApp
 A very basic project with Flsk-SocketIO to see how
 websockets work and to create a simple chatroom app.
 
+![Screenshot](https://github.com/Kartikay26/ChatApp/blob/master/screenshots/1.png?raw=true)
+
 To install, clone the project, navigate to the project 
 directory and then:
 
