@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, Websockets</title>
+	<script type="text/javascript" src="/static/socket.io.slim.js"></script>
+	<script type="text/javascript">
+		var socket = io();
+		function send_message(){
+			name = document.getElementById('n').value;
+			message = document.getElementById('m').value;
+			socket.emit("m",name,message);
+		}
+		socket.on("c",function (name,message){
+			line = "<b>"+name+":</b> "+message+"<br>";
+			document.getElementById('s').innerHTML += line;
+		});
+	</script>
+</head>
+<body>
+	<h1>Hi, There!</h1>
+	Your name: <input id="n" type="text" name="socket">
+	<br><br>
+	<div id="s">
+		<h3>Chat messages</h3>
+	</div>
+	<br><br>
+	<input id="m" type="text" name="socket">
+	<button onclick="send_message()">Send!</button>
+</body>
+</html>
